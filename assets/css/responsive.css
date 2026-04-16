@@ -33,6 +33,21 @@
 /* ---- MÓVIL (max 768px) ---- */
 @media (max-width: 768px) {
 
+    /* Ocultar shapes que causan overflow horizontal */
+    .hero-shapes {
+        display: none;
+    }
+
+    /* Evitar scroll horizontal */
+    body, html {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    .container, .row {
+        overflow-x: hidden;
+    }
+
     /* Hero */
     .hero-title {
         font-size: 2.2rem;
