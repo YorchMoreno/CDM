@@ -2,124 +2,88 @@
    Construsoluciones del Meta — Responsive
    ============================================= */
 
-/* Global overflow fix */
-body, html {
+/* ---- GLOBAL: evitar scroll horizontal ---- */
+html, body {
     overflow-x: hidden;
     max-width: 100%;
+}
+
+/* ---- DESKTOP GRANDE (max 1200px) ---- */
+@media (max-width: 1200px) {
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.9rem;
+    }
 }
 
 /* ---- TABLET (max 992px) ---- */
 @media (max-width: 992px) {
 
     /* Hero */
-    .hero-title {
-        font-size: 2.8rem;
-    }
+    .hero-title { font-size: 2.6rem; }
+    .hero-section .container { padding-top: 130px; }
 
-    .hero-section .container {
-        padding-top: 140px;
-    }
+    /* Galería */
+    .gallery-img-lg { height: 260px; }
 
-    /* Galería grande: apila en columna */
-    .gallery-img-lg {
-        height: 260px;
-    }
+    /* Slider obras */
+    #sliderImg { height: 360px !important; }
 
-    /* Slider obras grande */
-    #sliderImg {
-        height: 380px !important;
-    }
+    /* Costos */
+    .cost-factor-card { margin-bottom: 0; }
+    .payment-card { margin-bottom: 0; }
 
-    /* Misión/Visión */
-    .card.p-5 {
-        padding: 2rem !important;
-    }
-
-    /* Costos: cards en 2 columnas */
-    .cost-factor-card {
-        margin-bottom: 0;
-    }
-
-    /* Payment cards */
-    .payment-card {
-        margin-bottom: 0;
-    }
+    /* About: imagen principal ocupa todo */
+    .main-img { width: 100%; }
+    .floating-img { display: none; }
+    .experience-badge { right: 10px; top: 10px; }
 }
 
 /* ---- MÓVIL (max 768px) ---- */
 @media (max-width: 768px) {
 
-    /* Ocultar shapes que causan overflow horizontal */
-    .hero-shapes {
-        display: none;
-    }
-
-    /* Evitar scroll horizontal en todos los elementos */
-    *, *::before, *::after {
-        max-width: 100%;
-    }
-
-    .container, .row {
-        overflow-x: hidden;
-    }
+    /* Shapes del hero causan overflow — ocultar */
+    .hero-shapes { display: none !important; }
 
     /* Hero */
-    .hero-title {
-        font-size: 2.2rem;
-    }
-
-    .hero-section .container {
-        padding-top: 110px;
-    }
-
+    .hero-title { font-size: 2rem; }
+    .hero-section .container { padding-top: 110px; }
     .hero-section .btn-lg {
-        padding: 0.75rem 1.5rem !important;
-        font-size: 0.95rem;
+        padding: 0.7rem 1.4rem !important;
+        font-size: 0.9rem;
     }
 
-    /* Badge hero */
+    /* Badges del hero: no recortar */
+    .hero-section .d-flex.flex-wrap.gap-2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
     .hero-section .badge {
         white-space: normal;
-        font-size: 0.85rem !important;
+        font-size: 0.82rem !important;
         max-width: 100%;
     }
 
-    /* Ocultar imagen flotante en about */
-    .floating-img {
-        display: none;
-    }
-
-    .main-img {
-        width: 100%;
-    }
-
-    .experience-badge {
-        right: 10px;
-        top: 10px;
-        padding: 0.8rem;
-    }
+    /* Estadísticas hero */
+    .hero-section .counter { font-size: 1.5rem; }
 
     /* Secciones */
-    .py-6 {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-    }
+    .py-6 { padding-top: 3rem; padding-bottom: 3rem; }
+    .display-5 { font-size: 1.65rem; }
 
-    .display-5 {
-        font-size: 1.7rem;
-    }
+    /* About */
+    .floating-img { display: none; }
+    .main-img { width: 100%; }
+    .experience-badge { right: 8px; top: 8px; padding: 0.7rem; }
 
-    /* Galería grande: altura menor en móvil */
-    .gallery-img-lg {
-        height: 220px;
-    }
+    /* Galería */
+    .gallery-img-lg { height: 200px; }
+    .gallery-img { height: 180px; }
 
     /* Slider obras grande */
-    #sliderImg {
-        height: 260px !important;
-    }
+    #sliderImg { height: 240px !important; }
 
-    /* Botones flechas slider más pequeños en móvil */
+    /* Flechas sliders pequeñas */
     .slider-obras button,
     .slider-tejas button,
     .slider-tamborada button,
@@ -127,11 +91,14 @@ body, html {
         width: 28px !important;
         height: 28px !important;
         font-size: 14px !important;
+        left: 4px !important;
     }
-
-    /* Proceso: cards en columna */
-    .process-card {
-        margin-bottom: 1rem;
+    .slider-obras button:last-of-type,
+    .slider-tejas button:last-of-type,
+    .slider-tamborada button:last-of-type,
+    .slider-orna button:last-of-type {
+        right: 4px !important;
+        left: auto !important;
     }
 
     /* Features banner: 2 columnas */
@@ -140,138 +107,84 @@ body, html {
         max-width: 50%;
     }
 
-    /* Misión/Visión */
-    .card.p-5 {
-        padding: 1.5rem !important;
-    }
+    /* Proceso */
+    .process-card { margin-bottom: 0.5rem; }
 
-    /* Contacto: form full width */
+    /* Contacto: form apilado */
     #contactForm .col-md-6 {
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .contact-info-card { padding: 1.5rem !important; }
+    .contact-icon-lg { width: 46px; height: 46px; }
 
-    /* Footer: centrar en móvil */
+    /* Costos: requisitos del lote en 2 columnas */
+    .cost-factor-card { margin-bottom: 0; }
+
+    /* Plan de pagos: apilado */
+    .payment-card .display-4 { font-size: 2.8rem; }
+
+    /* Footer */
     .d-flex.flex-wrap.justify-content-between {
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
         text-align: center;
     }
-
-    /* Costos: cards apiladas */
-    .cost-factor-card {
-        margin-bottom: 0;
-    }
-
-    /* Payment cards: apiladas */
-    .payment-card {
-        margin-bottom: 0;
-    }
-
-    /* Contact info card */
-    .contact-info-card {
-        padding: 1.5rem !important;
-    }
-
-    .contact-icon-lg {
-        width: 48px;
-        height: 48px;
-    }
-
-    /* Includes section: columna completa */
-    .col-md-6 {
-        margin-bottom: 1rem;
-    }
 }
 
 /* ---- MÓVIL PEQUEÑO (max 576px) ---- */
 @media (max-width: 576px) {
 
+    /* Navbar */
+    .navbar-brand img { height: 22px !important; }
+
     /* Hero */
-    .hero-title {
-        font-size: 1.8rem;
-    }
-
-    .hero-section .container {
-        padding-top: 100px;
-    }
-
-    /* Badge hero que se recorta */
-    .hero-section .badge {
-        white-space: normal;
-        text-align: center;
-        font-size: 0.8rem !important;
-        padding: 0.5rem 1rem !important;
-        max-width: 100%;
-        display: inline-block;
-    }
-
-    /* Ocultar shapes decorativos */
-    .hero-shapes {
-        display: none;
-    }
+    .hero-title { font-size: 1.7rem; }
+    .hero-section .container { padding-top: 95px; }
 
     /* Botones hero en columna */
     .hero-section .d-flex.gap-3.flex-wrap {
         flex-direction: column;
+        align-items: stretch;
     }
-
     .hero-section .btn-lg {
         width: 100%;
         text-align: center;
-    }
-
-    /* Estadísticas hero más pequeñas */
-    .hero-section .counter {
-        font-size: 1.4rem;
-    }
-
-    /* Galería grande: altura mínima */
-    .gallery-img-lg {
-        height: 180px;
-    }
-
-    /* Slider obras grande */
-    #sliderImg {
-        height: 220px !important;
+        justify-content: center;
     }
 
     /* Títulos */
-    .display-5 {
-        font-size: 1.5rem;
-    }
+    .display-5 { font-size: 1.45rem; }
+    .display-2 { font-size: 2rem; }
 
-    /* Navbar brand más pequeño */
-    .navbar-brand img {
-        height: 24px !important;
-    }
+    /* Galería */
+    .gallery-img-lg { height: 160px; }
+    .gallery-img { height: 160px; }
 
-    /* Cards proceso en columna completa */
-    .process-number {
-        font-size: 2rem;
-    }
+    /* Slider obras */
+    #sliderImg { height: 200px !important; }
 
-    /* Footer links en columna */
-    .footer .row.g-4 > div {
-        margin-bottom: 1.5rem;
-    }
+    /* Proceso */
+    .process-number { font-size: 2rem; }
+    .process-icon { width: 55px; height: 55px; }
 
-    /* Costos: porcentaje más pequeño */
-    .payment-card .display-4 {
-        font-size: 2.5rem;
-    }
+    /* Costos: requisitos en columna */
+    .cost-factor-card { padding: 1rem !important; }
+    .payment-card .display-4 { font-size: 2.2rem; }
+    .payment-card { padding: 1.5rem !important; }
 
-    /* Contact icon lg en móvil pequeño */
-    .contact-icon-lg {
-        width: 42px;
-        height: 42px;
-        font-size: 1rem !important;
-    }
+    /* Contacto */
+    .contact-icon-lg { width: 40px; height: 40px; font-size: 1rem !important; }
 
-    /* Trabaja btn en footer */
-    .trabaja-btn {
-        font-size: 0.75rem;
-        padding: 0.3rem 0.8rem;
-    }
+    /* Footer */
+    .trabaja-btn { font-size: 0.75rem; padding: 0.3rem 0.8rem; }
+    footer .col-lg-4,
+    footer .col-lg-2 { margin-bottom: 1.5rem; }
+
+    /* Misión/Visión card header */
+    .card-header h3 { font-size: 1.3rem; }
+
+    /* Modelos: cards full width */
+    .model-card .card-img-wrapper img { height: 200px; }
 }
