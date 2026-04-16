@@ -47,6 +47,13 @@
         font-size: 0.95rem;
     }
 
+    /* Badge hero */
+    .hero-section .badge {
+        white-space: normal;
+        font-size: 0.85rem !important;
+        max-width: 100%;
+    }
+
     /* Ocultar imagen flotante en about */
     .floating-img {
         display: none;
@@ -133,6 +140,16 @@
 
     .hero-section .container {
         padding-top: 100px;
+    }
+
+    /* Badge hero que se recorta */
+    .hero-section .badge {
+        white-space: normal;
+        text-align: center;
+        font-size: 0.8rem !important;
+        padding: 0.5rem 1rem !important;
+        max-width: 100%;
+        display: inline-block;
     }
 
     /* Ocultar shapes decorativos */
