@@ -2,6 +2,12 @@
    Construsoluciones del Meta — Responsive
    ============================================= */
 
+/* Global overflow fix */
+body, html {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 /* ---- TABLET (max 992px) ---- */
 @media (max-width: 992px) {
 
@@ -28,6 +34,16 @@
     .card.p-5 {
         padding: 2rem !important;
     }
+
+    /* Costos: cards en 2 columnas */
+    .cost-factor-card {
+        margin-bottom: 0;
+    }
+
+    /* Payment cards */
+    .payment-card {
+        margin-bottom: 0;
+    }
 }
 
 /* ---- MÓVIL (max 768px) ---- */
@@ -38,9 +54,8 @@
         display: none;
     }
 
-    /* Evitar scroll horizontal */
-    body, html {
-        overflow-x: hidden;
+    /* Evitar scroll horizontal en todos los elementos */
+    *, *::before, *::after {
         max-width: 100%;
     }
 
@@ -143,6 +158,31 @@
         gap: 0.5rem;
         text-align: center;
     }
+
+    /* Costos: cards apiladas */
+    .cost-factor-card {
+        margin-bottom: 0;
+    }
+
+    /* Payment cards: apiladas */
+    .payment-card {
+        margin-bottom: 0;
+    }
+
+    /* Contact info card */
+    .contact-info-card {
+        padding: 1.5rem !important;
+    }
+
+    .contact-icon-lg {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* Includes section: columna completa */
+    .col-md-6 {
+        margin-bottom: 1rem;
+    }
 }
 
 /* ---- MÓVIL PEQUEÑO (max 576px) ---- */
@@ -212,13 +252,26 @@
         font-size: 2rem;
     }
 
-    /* Includes section: columna completa */
-    .col-md-6 {
-        margin-bottom: 1rem;
-    }
-
     /* Footer links en columna */
     .footer .row.g-4 > div {
         margin-bottom: 1.5rem;
+    }
+
+    /* Costos: porcentaje más pequeño */
+    .payment-card .display-4 {
+        font-size: 2.5rem;
+    }
+
+    /* Contact icon lg en móvil pequeño */
+    .contact-icon-lg {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem !important;
+    }
+
+    /* Trabaja btn en footer */
+    .trabaja-btn {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.8rem;
     }
 }
