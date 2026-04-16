@@ -1,0 +1,192 @@
+/* =============================================
+   Construsoluciones del Meta — Responsive
+   ============================================= */
+
+/* ---- TABLET (max 992px) ---- */
+@media (max-width: 992px) {
+
+    /* Hero */
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-section .container {
+        padding-top: 140px;
+    }
+
+    /* Galería grande: apila en columna */
+    .gallery-img-lg {
+        height: 260px;
+    }
+
+    /* Slider obras grande */
+    #sliderImg {
+        height: 380px !important;
+    }
+
+    /* Misión/Visión */
+    .card.p-5 {
+        padding: 2rem !important;
+    }
+}
+
+/* ---- MÓVIL (max 768px) ---- */
+@media (max-width: 768px) {
+
+    /* Hero */
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-section .container {
+        padding-top: 110px;
+    }
+
+    .hero-section .btn-lg {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.95rem;
+    }
+
+    /* Ocultar imagen flotante en about */
+    .floating-img {
+        display: none;
+    }
+
+    .main-img {
+        width: 100%;
+    }
+
+    .experience-badge {
+        right: 10px;
+        top: 10px;
+        padding: 0.8rem;
+    }
+
+    /* Secciones */
+    .py-6 {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .display-5 {
+        font-size: 1.7rem;
+    }
+
+    /* Galería grande: altura menor en móvil */
+    .gallery-img-lg {
+        height: 220px;
+    }
+
+    /* Slider obras grande */
+    #sliderImg {
+        height: 260px !important;
+    }
+
+    /* Botones flechas slider más pequeños en móvil */
+    .slider-obras button,
+    .slider-tejas button,
+    .slider-tamborada button,
+    .slider-orna button {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 14px !important;
+    }
+
+    /* Proceso: cards en columna */
+    .process-card {
+        margin-bottom: 1rem;
+    }
+
+    /* Features banner: 2 columnas */
+    .py-5.bg-primary .col-lg-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* Misión/Visión */
+    .card.p-5 {
+        padding: 1.5rem !important;
+    }
+
+    /* Contacto: form full width */
+    #contactForm .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Footer: centrar en móvil */
+    .d-flex.flex-wrap.justify-content-between {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* ---- MÓVIL PEQUEÑO (max 576px) ---- */
+@media (max-width: 576px) {
+
+    /* Hero */
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-section .container {
+        padding-top: 100px;
+    }
+
+    /* Ocultar shapes decorativos */
+    .hero-shapes {
+        display: none;
+    }
+
+    /* Botones hero en columna */
+    .hero-section .d-flex.gap-3.flex-wrap {
+        flex-direction: column;
+    }
+
+    .hero-section .btn-lg {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Estadísticas hero más pequeñas */
+    .hero-section .counter {
+        font-size: 1.4rem;
+    }
+
+    /* Galería grande: altura mínima */
+    .gallery-img-lg {
+        height: 180px;
+    }
+
+    /* Slider obras grande */
+    #sliderImg {
+        height: 220px !important;
+    }
+
+    /* Títulos */
+    .display-5 {
+        font-size: 1.5rem;
+    }
+
+    /* Navbar brand más pequeño */
+    .navbar-brand img {
+        height: 24px !important;
+    }
+
+    /* Cards proceso en columna completa */
+    .process-number {
+        font-size: 2rem;
+    }
+
+    /* Includes section: columna completa */
+    .col-md-6 {
+        margin-bottom: 1rem;
+    }
+
+    /* Footer links en columna */
+    .footer .row.g-4 > div {
+        margin-bottom: 1.5rem;
+    }
+}
